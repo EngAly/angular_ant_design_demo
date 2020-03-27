@@ -1,0 +1,64 @@
+<form nz-form [formGroup]="validateForm" class="login-form" (ngSubmit)="submitForm()" [nzLayout]="vertical">
+
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Username</nz-form-label>
+    <nz-form-control [nzErrorTip]="usernameErr">
+      <nz-input-group nzPrefixIcon="user">
+        <input type="text" nz-input formControlName="userName" placeholder="Username" />
+      </nz-input-group>
+
+      <ng-template #usernameErr let-control>
+        <ng-container *ngIf="control.hasError('required')">
+          Please input your username!
+        </ng-container>
+
+        <ng-container *ngIf="control.hasError('duplicatedUser')">
+          The username is redundant!
+        </ng-container>
+      </ng-template>
+    </nz-form-control>
+  </nz-form-item>
+
+
+
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Password</nz-form-label>
+    <nz-form-control nzErrorTip="Please input your Password!">
+      <nz-input-group nzPrefixIcon="lock">
+        <input type="password" nz-input formControlName="password" placeholder="Password" />
+      </nz-input-group>
+    </nz-form-control>
+  </nz-form-item>
+
+
+  <nz-form-item>
+    <nz-form-label [nzSpan]="7" nzRequired>Confirm Password</nz-form-label>
+    <nz-form-control nzHasFeedback [nzErrorTip]="passwordError">
+      <nz-input-group nzPrefixIcon="lock">
+        <input type="password" nz-input formControlName="confirm" placeholder="confirm your password" />
+      </nz-input-group>
+      <ng-template #passwordError let-control>
+        <ng-container *ngIf="control.hasError('required')">
+          Please confirm your password!
+        </ng-container>
+        <ng-container *ngIf="control.hasError('confirm')">
+          Password is inconsistent!
+        </ng-container>
+      </ng-template>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-control>
+      <label nz-checkbox formControlName="remember">
+        <span>Remember me</span>
+      </label>
+      <br>
+      <a class="login-form-forgot" class="login-form-forgot">Forgot password</a>
+      <br>
+      <button nz-button class="login-form-button" [nzType]="'primary'">Log in</button>
+      Or
+      <a>register now!</a>
+    </nz-form-control>
+  </nz-form-item>
+</form>

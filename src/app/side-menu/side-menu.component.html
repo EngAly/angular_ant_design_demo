@@ -1,0 +1,73 @@
+<div class="wrapper">
+  <ul nz-menu nzMode="inline" nzTheme="dark">
+
+    <li nz-menu-item nz-tooltip nzPlacement="right" nzTitle="home page">
+      <i nz-icon nzType="home"></i>
+      <span><a routerLink="/home" routerLinkActive="active">Home</a></span>
+    </li>
+
+
+    <li nz-menu-item nz-tooltip nzPlacement="right" nzTitle="table that show all products">
+      <i nz-icon nzType="table"></i>
+      <span><a routerLink="/statistics">Statistics</a></span>
+    </li>
+
+
+    <li nz-submenu nzTitle="Products" nzIcon="shop">
+      <ul>
+
+        <li nz-menu-item>
+          <i nz-icon nzType="laptop"></i>
+          <span>PCs</span>
+        </li>
+
+        <li nz-menu-item>
+          <i nz-icon nzType="printer"></i>
+          <span>Printers</span>
+        </li>
+
+        <li nz-menu-item>
+          <i nz-icon nzType="usb"></i>
+          <span>Storages</span>
+        </li>
+      </ul>
+    </li>
+
+
+    <li nz-submenu nzTitle="Setting" nzIcon="setting">
+      <ul>
+        <li nz-menu-item>Admin</li>
+
+        <li nz-menu-item>Management</li>
+
+        <li nz-submenu nzTitle="Contact" nzIcon="contact">
+          <ul>
+
+            <li nz-menu-item>
+              <i nz-icon nzType="twitter"></i>
+              <span>Twitter</span>
+            </li>
+
+            <li nz-menu-item>
+              <i nz-icon nzType="facebook"></i>
+              <span>Facebook</span>
+            </li>
+
+          </ul>
+        </li>
+
+      </ul>
+    </li>
+
+
+    <li nz-menu-item nz-tooltip nzPlacement="right" nzTitle="register now">
+      <i nz-icon nzType="user-add"></i>
+      <span><a routerLink="/register" routerLinkActive="active">Register</a></span>
+    </li>
+ 
+
+
+
+
+  </ul>
+</div>

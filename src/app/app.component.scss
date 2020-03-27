@@ -1,0 +1,29 @@
+nz-header,nz-footer {
+        background: #7dbcea;
+        color: #fff;
+      }
+
+      nz-footer {
+        line-height: 1.5;
+      }
+
+      nz-sider {
+        background: #0e2b41;
+        color: #fff;
+        line-height: 120px;
+      }
+
+      nz-table {
+        direction: ltr;
+        width: 60%;
+        
+        margin-left: 5%;
+      }
+
+      nz-layout {
+        margin-bottom: 48px;
+      }
+
+      nz-layout:last-child {
+        margin: 0;
+      }

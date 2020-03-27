@@ -1,0 +1,18 @@
+<nz-table #tableRef [nzData]="products" [nzPageSize]=7 [nzShowQuickJumper]=true [nzShowTotal]>
+    <thead>
+        <tr>
+            <th nzShowSort>Id</th>
+            <th nzShowSort>Name</th>
+            <th nzShowSort>Price</th>
+            <th nzShowSort>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of tableRef.data">
+            <td>{{product.id}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.stock}}</td>
+        </tr>
+    </tbody>
+</nz-table>
